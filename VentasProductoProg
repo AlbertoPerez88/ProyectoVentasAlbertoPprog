@@ -1,2 +1,3 @@
-id_Producto -> 1, nombre -> 1, precio -> 1.0€
-id_Producto -> 2, nombre -> 1, precio -> 1.0€
+id_Producto -> 1, nombre -> a, precio -> 1.0€
+id_Producto -> 2, nombre -> b, precio -> 2.0€
+id_Producto -> 3, nombre -> c, precio -> 3.0€

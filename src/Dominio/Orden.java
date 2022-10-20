@@ -42,6 +42,17 @@ public class Orden {
         System.out.println("\nHay un total de " + prorucdros.size() + " productos");  //esto es para saber el total de productos diferentes que ha comprado (ej: lechuga, macarrones, sandia -> ha comprado 3)
     }
 
+
+    public double calcularTotal(int total) {
+        double precioTotal = 0;
+        for (int i = 0; i < prorucdros.size(); i++) {
+            precioTotal = precioTotal + (this.prorucdros.get(i).getPrecio());     //esto es para ir sumandole precios, al precio del primer producto que introducimos
+        }
+        System.out.println("\nEl precio total de la compra es: " + precioTotal + "€"); //esto es para calcular el precio total de la compra
+
+        return 0;
+    }
+
     public void mostrarOrdenTxt(ArrayList<Producto> produc) {
         PrintWriter salida = null;
         File archivo = new File("VentasProductoProg");
@@ -57,17 +68,7 @@ public class Orden {
             salida.close();
         }
     }
-
-    public double calcularTotal(int total) {
-        double precioTotal = 0;
-        for (int i = 0; i < prorucdros.size(); i++) {
-            precioTotal = precioTotal + (this.prorucdros.get(i).getPrecio());     //esto es para ir sumandole precios, al precio del primer producto que introducimos
-        }
-        System.out.println("\nEl precio total de la compra es: " + precioTotal + "€"); //esto es para calcular el precio total de la compra
-
-        return 0;
-    }
-
+    
     public static void crearArchivoTxt(String nombreTxt) {
         File archivo = new File(nombreTxt);
         try {

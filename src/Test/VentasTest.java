@@ -1,6 +1,7 @@
 package Test;
 import Dominio.Orden;
 import Dominio.Producto;
+import Manejo.AccesoaDatos;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -36,6 +37,7 @@ public class VentasTest {
 
     public static void main(String[] args) {
         Orden or1 = new Orden();
+        AccesoaDatos ac1 = new AccesoaDatos();
         double precio = 0;
         int maxProd = Orden.getMAX_PRODUCTOS();
         String nombre = "";
