@@ -1,6 +1,7 @@
 package Test;
 import Dominio.Orden;
 import Dominio.Producto;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -43,10 +44,10 @@ public class VentasTest {
         or1.mostrarOrden(null);
         or1.calcularTotal(total);
         
-        //A partir de aqui vamos a almacenar los productos en un archivo ".txt"         EN CONSTRUCCION      
+        //A partir de aqui vamos a almacenar los productos en un archivo ".txt"       
         String nombreArchivo = "ventasProductos.txt";
-        Orden.crearArchivoTxt(nombreArchivo);       
-        
+        Orden.crearArchivoTxt(nombreArchivo);   
+        or1.mostrarOrdenTxt(null);
         
     }
 }
